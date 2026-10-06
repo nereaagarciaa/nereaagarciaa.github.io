@@ -19,3 +19,11 @@ if (navToggle && navList) {
         }
     });
 }
+
+const profileImage = document.querySelector(".hero-image img");
+
+if (profileImage) {
+    profileImage.addEventListener("error", () => {
+        profileImage.closest(".hero-image").remove();
+    });
+}
